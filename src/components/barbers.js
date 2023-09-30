@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import { Card, Col, Container, Row, Table } from 'react-bootstrap';
 import axios from 'axios';
-import { getBarberService } from './services/config';
+import { getBarberService } from '../services/config';
 
-function Barbers() {
+const Barbers = () => {
 
   const [barbers, setBarbers] = useState([]);
 

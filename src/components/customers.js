@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Table } from 'react-bootstrap';
 import axios from 'axios';
-import { getCustomerService } from '../services/config';
+import { getBarberService } from '../services/config';
 
 const Customers = () => {
 
@@ -12,8 +12,7 @@ const Customers = () => {
   }, []);
 
   const getCustomers = async () => {
-    axios.get(`${getCustomerService()}/customers`, { withCredentials: true }).then((res) => {
-      console.log(res.data);
+    axios.get(`${getBarberService()}/customers`, { withCredentials: true }).then((res) => {
       setCustomers(res.data);
     }).catch((err) => {
       console.error('error', err);
